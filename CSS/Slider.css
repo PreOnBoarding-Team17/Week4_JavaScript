@@ -116,6 +116,8 @@
     letter-spacing: -0.27px;
   }
   .slider__special-event {
+    float: right;
+    width: 50%;
   }
   .pc {
     display: block;

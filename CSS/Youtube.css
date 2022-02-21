@@ -1,0 +1,39 @@
+.youtube {
+  padding-top: 120px;
+}
+
+.youtube > div {
+  display: block;
+  position: relative;
+  width: 100%;
+  height: 56.2vw;
+}
+
+#youtube__player {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.youtube__caption {
+  display: block;
+  text-decoration: none;
+  color: #555;
+  text-align: center;
+  margin: 10px auto;
+  width: 100%;
+  font-size: 11px;
+}
+@media screen and (min-width: 1024px) {
+  .youtube > div {
+    max-width: 1120px;
+    height: 630px;
+    margin: 0 auto;
+  }
+
+  .youtube__caption {
+    max-width: 1120px;
+  }
+}
