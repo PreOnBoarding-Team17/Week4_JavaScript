@@ -16,11 +16,13 @@ header {
 
 .menus {
   max-width: 1120px;
+  height: 100%;
   margin: 0 auto;
   padding-top: 20px;
 }
 
 .menu {
+  position: relative;
   float: left;
   width: 25%;
   height: 65px;
@@ -29,6 +31,12 @@ header {
   text-align: center;
   line-height: 65px;
 }
+/* .menu:nth-child(1) {
+  text-align: start;
+}
+.menu:last-child {
+  text-align: end;
+} */
 
 .menu-text:hover {
   border-bottom: 4px solid #ffc948;
