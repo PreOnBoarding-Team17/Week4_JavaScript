@@ -82,6 +82,10 @@ header {
     border-top: 1px solid #ccc;
   }
 
+  .menu-text {
+    color: #787878;
+  }
+
   .menu-text:hover {
     border-bottom: none;
     padding-bottom: 0px;
