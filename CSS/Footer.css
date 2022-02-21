@@ -141,8 +141,8 @@ footer {
     padding-top: 15px;
   }
   .footer__about div {
-    font-size: 14px;
     margin: 0px;
+    font-size: 14px;
     font-weight: 700;
     line-height: 14px;
     letter-spacing: -0.21px;
@@ -162,13 +162,13 @@ footer {
     margin-right: 0;
     top: 10%;
     position: relative;
-    bottom: 50px;
+    bottom: 47.5px;
     right: 0px;
     text-align: end;
   }
 
   .footer__tems a {
-    font-size: 14px;
+    font-size: 13px;
     margin-left: 30px;
     margin-right: 0;
   }
