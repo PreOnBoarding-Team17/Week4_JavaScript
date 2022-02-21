@@ -27,3 +27,15 @@ window.addEventListener('scroll', function(e) {
 
     scrollAction(y)
 });
+
+window.addEventListener('beforeunload', function(event) {
+    this.window.opener.location('https://www.youtube.com/watch?v=N0dc-idpwoE', 'popup', 'width=800, height=600');
+    event.preventDefault();
+    // Chrome에서는 returnValue 설정이 필요함
+    event.returnValue = '';
+   
+  });
+  window.addEventListener('unload', function(event) {
+    console.log('I am the 3rd one.');
+    this.alert('123')
+  });
