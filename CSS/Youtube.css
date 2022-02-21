@@ -1,0 +1,6 @@
+.youtube > div {
+  display: block;
+  width: 1120px;
+  height: 630px;
+  margin: 0 auto;
+}
