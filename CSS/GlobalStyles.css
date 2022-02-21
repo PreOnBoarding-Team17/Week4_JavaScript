@@ -1,0 +1,11 @@
+body {
+  font-family: "Noto Sans KR", sans-serif, NanumGothic, "나눔고딕", Dotum,
+    "돋움", Helvetica, "Apple SD Gothic Neo";
+  font-size: 12px;
+  line-height: 16px;
+  color: #222222;
+  letter-spacing: -0.5px;
+  outline-width: 1px;
+  margin: 0;
+  padding: 0;
+}
