@@ -34,11 +34,57 @@
     <!-- css -->
     <link rel="stylesheet" href="./CSS/Reset.css" />
     <link rel="stylesheet" href="./CSS/GlobalStyles.css" />
+    <link rel="stylesheet" href="./CSS/Slider.css" />
   </head>
   <body>
     <nav>네비게이션바</nav>
     <section>유튜브</section>
-    <section>슬라이더</section>
+    <section class="slider">
+      <div class="slider__container">
+        <div class="slider__header">
+          <h3 class="slider__title">
+            <span>꽃과 함께 하는 일상, </span>
+            <b>플라워클래스</b>
+          </h3>
+        </div>
+        <div class="slider__body">
+          <div class="slider__event-class">
+            <a class="slider__event-class--link" href="#">
+              <img
+                class="slider__event-class--img pc"
+                src="./Assets/Slider/Slider_1.jpeg"
+                alt=""
+              />
+              <img
+                class="slider__event-class--img mobile"
+                src="./Assets/Slider/Slider_Mobile_1.jpeg"
+                alt=""
+              />
+              <span
+                class="slider__event-class--image pc"
+                style="background-image: url('./Assets/Slider/Slider_1.jpeg')"
+              ></span>
+              <span
+                class="slider__event-class--image mobile"
+                style="
+                  background-image: url('./Assets/Slider/Slider_Mobile_1.jpeg');
+                "
+              ></span>
+              <strong class="slider__event-class--title"
+                >1월 플라워 클래스</strong
+              >
+              <span class="slider__event-class--subtitle"
+                >매주 새로운 커리큘럼으로 배우는</span
+              >
+            </a>
+          </div>
+          <ul class="slider__special-event">
+            <li></li>
+            <li></li>
+          </ul>
+        </div>
+      </div>
+    </section>
     <section>배너</section>
     <footer>푸터</footer>
   </body>

@@ -1,0 +1,126 @@
+.slider__header {
+  padding: 40px 20px 0;
+}
+
+.slider__title {
+  font-size: 22px;
+  line-height: 34px;
+  letter-spacing: -0.33px;
+}
+.slider__title > b {
+  font-weight: 700;
+}
+.slider__body {
+  position: relative;
+  padding: 20px 20px 40px;
+}
+.slider__event-class--link {
+  position: relative;
+  display: block;
+}
+.slider__event-class--image {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: tomato;
+}
+.slider__event-class--img {
+  width: 100%;
+  vertical-align: top;
+  border: 0;
+}
+.slider__event-class--title {
+  position: absolute;
+  bottom: 7%;
+  left: 20px;
+  padding-right: 15px;
+  z-index: 2;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  letter-spacing: -0.24px;
+  color: #222222;
+}
+.slider__event-class--subtitle {
+  position: absolute;
+  bottom: 18%;
+  left: 20px;
+  z-index: 2;
+  max-width: 90%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 300;
+  letter-spacing: -0.21px;
+  color: #222;
+}
+.pc {
+  display: none;
+}
+.mobile {
+  display: block;
+}
+
+@media (min-width: 1024px) {
+  .slider__container {
+    max-width: 1240px;
+    margin: 0 auto;
+    padding: 0 60px;
+  }
+  .slider__header {
+    padding: 90px 0 0;
+  }
+  .slider__title {
+    font-size: 30px;
+    line-height: 45px;
+    font-weight: 300;
+    letter-spacing: -0.45px;
+  }
+  .slider__body {
+    padding: 40px 0 120px;
+  }
+  .slider__event-class {
+    float: left;
+    width: 50%;
+    padding-right: 2%;
+  }
+  .slider__event-class--title {
+    bottom: 7%;
+    left: 35px;
+    padding-right: 20px;
+    font-size: 25px;
+    line-height: 37px;
+    font-weight: 700;
+    letter-spacing: -0.38px;
+  }
+  .slider__event-class--subtitle {
+    bottom: 18%;
+    left: 35px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-size: 18px;
+    line-height: 27px;
+    font-weight: 300;
+    letter-spacing: -0.27px;
+  }
+  .slider__special-event {
+  }
+  .pc {
+    display: block;
+  }
+  .mobile {
+    display: none;
+  }
+}
