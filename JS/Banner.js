@@ -1,6 +1,6 @@
-let winWidth;
-let curFlag;
-const bannerItem = document.querySelectorAll(".carousel-item");
+var winWidth;
+var curFlag;
+var bannerItem = document.querySelectorAll(".carousel-item");
 
 window.onload = function () {
   winWidth = window.innerWidth;
@@ -17,9 +17,9 @@ window.onload = function () {
   }
 };
 
-const carouselInner = document.querySelector(".carousel-inner");
+var carouselInner = document.querySelector(".carousel-inner");
 
-const handleCarousel = () => {
+var handleCarousel = () => {
   carouselInner.style.width = `${(window.innerWidth - 40) * 2}px`;
 };
 
@@ -37,13 +37,13 @@ window.onresize = function () {
   }
 };
 
-let curPos = 0;
-let postion = 0;
-let start_x, end_x, x, start;
-let IMAGE_WIDTH = window.innerWidth - 40;
-let pressed = false;
-const images = document.querySelector(".carousel-inner");
-const sliderNav = document.querySelectorAll(".banner__carousel__nav-item");
+var curPos = 0;
+var postion = 0;
+var start_x, end_x, x, start;
+var IMAGE_WIDTH = window.innerWidth - 40;
+var pressed = false;
+var images = document.querySelector(".carousel-inner");
+var sliderNav = document.querySelectorAll(".banner__carousel__nav-item");
 
 images.addEventListener("touchstart", touch_start);
 images.addEventListener("touchend", touch_end);
