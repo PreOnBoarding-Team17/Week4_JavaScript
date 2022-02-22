@@ -10,3 +10,16 @@
   margin: 0;
   padding: 0;
 }
+
+a {
+  text-decoration: none;
+  outline-width: 1px;
+  background-color: transparent;
+  -webkit-text-decoration-skip: objects;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
