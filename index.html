@@ -29,14 +29,16 @@
   <link rel="stylesheet" href="./CSS/Banner.css" />
   <link rel="stylesheet" href="./CSS/Slider.css" />
   <link rel="stylesheet" href="./CSS/Footer.css" />
+  <link rel="stylesheet" href="./CSS/Modal.css" />
 
   <!-- js -->
   <script defer src="JS/GNB.js"></script>
   <script defer src="./JS/Banner.js"></script>
   <script defer src="./JS/Slider.js"></script>
   <script defer src="./JS/Footer.js"></script>
+  <script defer src="./JS/Modal.js"></script>
 
-    <!--[if lt IE 9]>
+  <!--[if lt IE 9]>
     <!DOCTYPE html
       PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
@@ -50,7 +52,8 @@
       <div class="mobile-logo">
         <a href="https://kukka.kr/"><img src="./Asset/mobile-logo.jpg" alt="logo" /></a>
       </div>
-      <div class="mobile-img"><a href="https://kukka.kr/cart/?next=/account/login/"><img src="./Asset/shop.jpg" class="menu-img" alt="logo" /></span></a></div>
+      <div class="mobile-img"><a href="https://kukka.kr/cart/?next=/account/login/"><img src="./Asset/shop.jpg"
+            class="menu-img" alt="logo" /></span></a></div>
     </div>
 
     <div class="nav-wrapper">
@@ -66,8 +69,10 @@
             <a href="#flower-class"><span class="menu-text">플라워클래스</span></a>
           </li>
           <li class="menu mobile-block">
-            <a href="https://kukka.kr/account/login/?next=/account/dashboard/"><img src="./Asset/profile.jpg" class="menu-img" alt="profile" /></a>
-            <a href="https://kukka.kr/cart/?next=/account/login/"><img src="./Asset/shop.jpg" class="menu-img" alt="shopping" /></span></a>
+            <a href="https://kukka.kr/account/login/?next=/account/dashboard/"><img src="./Asset/profile.jpg"
+                class="menu-img" alt="profile" /></a>
+            <a href="https://kukka.kr/cart/?next=/account/login/"><img src="./Asset/shop.jpg" class="menu-img"
+                alt="shopping" /></span></a>
           </li>
         </ul>
       </nav>
@@ -76,21 +81,18 @@
 
   <div id="video" class="youtube">
     <div class="youtube-area">
-      <iframe 
-        id="youtube__player" 
+      <iframe id="youtube__player"
         src="https://www.youtube.com/embed/N0dc-idpwoE?autoplay=1&mute=1&loop=1&playlist=N0dc-idpwoE&enablejsapi=1&origin=http://localhost:5500"
-        title="YouTube video player"
-        frameborder="0"
+        title="YouTube video player" frameborder="0"
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-        allowfullscreen
-      >
+        allowfullscreen>
         현재 브라우저에서는 iframe 이 지원되지 않습니다
       </iframe>
     </div>
     <a href="https://youtu.be/N0dc-idpwoE" target="youtube__player" class="youtube__caption">
       kukka 꾸까│ 한 달 내내 진심을 전해요.
     </a>
-  </div> 
+  </div>
 
 
   <div id="flower-class" class="slider">
@@ -98,102 +100,86 @@
       <div class="slider__header">
         <h3 class="slider__title">
           <span>꽃과 함께 하는 일상, </span>
-        <b>플라워클래스</b>
-      </h3>
-    </div>
-
-    <div class="slider__body">
-      <div class="slider__main">
-        <a class="slider__main--link" href="#">
-          <img
-            class="slider__main--img pc"
-            src="./Asset/Slider/Slider_1.jpeg"
-            alt="메인 이미지"
-          />
-          <img
-            class="slider__main--img mobile"
-            src="./Asset/Slider/Slider_1.jpeg"
-            alt="메인 이미지"
-          />
-          <span
-            id="main-image_pc"
-            class="slider__main--image pc"
-            style="background-image: url('./Asset/Slider/Slider_1.jpeg')"
-          ></span>
-          <span
-            id="main-image_mobile"
-            class="slider__main--image mobile"
-            style="
-              background-image: url('./Asset/Slider/Slider_1.jpeg');
-            "
-          ></span>
-          <strong class="slider__main--title"
-            >1월 플라워 클래스 ></strong
-          >
-          <span class="slider__main--subtitle"
-            >매주 새로운 커리큘럼으로 배우는</span
-          >
-        </a>
+          <b>플라워클래스</b>
+        </h3>
       </div>
 
-      <ul class="slider__sub">
-        <li class="slider__sub--item first">
-          <div>
-            <dl class="slider__sub--wrapper">
-              <dt class="slider__sub--thumbnail">
-                <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_2.jpeg');" href="">
-                  <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_2.jpeg" alt="이미지">
-                  <span id="sub-image_first" class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_2.jpeg')"></span>
-                </a>
-              </dt>
-              <dd class="slider__sub--summary">
-                <span id="title_first" class="slider__sub--summary-title">오아시스 리스(2/21~2/27)</span>
-                <span id="price_first" class="slider__sub--summary-price">79,000원</span>
-                <span class="blank"></span>
-                <span id="chipList_first" class="slider__sub--summary-chips">
-                  <a class="slider__sub--summary-chip purple" href="">광화문점</a>
-                  <a class="slider__sub--summary-chip cyan" href="">잠실점</a>
-                  <a class="slider__sub--summary-chip orange" href="">월계점</a>
-                  <a class="slider__sub--summary-chip lightblue" href="">구로점</a>
-                  <a class="slider__sub--summary-chip yellow" href="">송파점</a>
-                  <a class="slider__sub--summary-chip blue" href="">부산동래점</a>
-                </span>
-              </dd>
-            </dl>
-          </div>
-        </li>
+      <div class="slider__body">
+        <div class="slider__main">
+          <a class="slider__main--link" href="#">
+            <img class="slider__main--img pc" src="./Asset/Slider/Slider_1.jpeg" alt="메인 이미지" />
+            <img class="slider__main--img mobile" src="./Asset/Slider/Slider_1.jpeg" alt="메인 이미지" />
+            <span id="main-image_pc" class="slider__main--image pc"
+              style="background-image: url('./Asset/Slider/Slider_1.jpeg')"></span>
+            <span id="main-image_mobile" class="slider__main--image mobile" style="
+              background-image: url('./Asset/Slider/Slider_1.jpeg');
+            "></span>
+            <strong class="slider__main--title">1월 플라워 클래스 ></strong>
+            <span class="slider__main--subtitle">매주 새로운 커리큘럼으로 배우는</span>
+          </a>
+        </div>
 
-        <li class="slider__sub--item second">
-          <div>
-            <dl class="slider__sub--wrapper">
-              <dt class="slider__sub--thumbnail">
-                <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_3.jpeg');" href="">
-                  <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_3.jpeg" alt="이미지">
-                  <span id="sub-image_second" class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_3.jpeg')"></span>
-                </a>
-              </dt>
-              <dd class="slider__sub--summary">
-                <span id="title_second" class="slider__sub--summary-title">클래식 핸드타이드(2/28~3/6)</span>
-                <span id="price_second" class="slider__sub--summary-price">79,000원</span>
-                <span class="blank"></span>
-                <span id="chipList_second" class="slider__sub--summary-chips">
-                  <a class="slider__sub--summary-chip cyan" href="">잠실점</a>
-                  <a class="slider__sub--summary-chip orange" href="">월계점</a>
-                  <a class="slider__sub--summary-chip lightblue" href="">구로점</a>
-                  <a class="slider__sub--summary-chip yellow" href="">송파점</a>
-                  <a class="slider__sub--summary-chip blue" href="">부산동래점</a>
-                </span>
-              </dd>
-            </dl>
-          </div>
-        </li>
-      </ul>
-      <button class="slider__button-left"></button>
-      <button class="slider__button-right"></button>
+        <ul class="slider__sub">
+          <li class="slider__sub--item first">
+            <div>
+              <dl class="slider__sub--wrapper">
+                <dt class="slider__sub--thumbnail">
+                  <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_2.jpeg');"
+                    href="">
+                    <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_2.jpeg" alt="이미지">
+                    <span id="sub-image_first" class="slider__sub--thumbnail__image"
+                      style="background-image: url('./Asset/Slider/Slider_2.jpeg')"></span>
+                  </a>
+                </dt>
+                <dd class="slider__sub--summary">
+                  <span id="title_first" class="slider__sub--summary-title">오아시스 리스(2/21~2/27)</span>
+                  <span id="price_first" class="slider__sub--summary-price">79,000원</span>
+                  <span class="blank"></span>
+                  <span id="chipList_first" class="slider__sub--summary-chips">
+                    <a class="slider__sub--summary-chip purple" href="">광화문점</a>
+                    <a class="slider__sub--summary-chip cyan" href="">잠실점</a>
+                    <a class="slider__sub--summary-chip orange" href="">월계점</a>
+                    <a class="slider__sub--summary-chip lightblue" href="">구로점</a>
+                    <a class="slider__sub--summary-chip yellow" href="">송파점</a>
+                    <a class="slider__sub--summary-chip blue" href="">부산동래점</a>
+                  </span>
+                </dd>
+              </dl>
+            </div>
+          </li>
+
+          <li class="slider__sub--item second">
+            <div>
+              <dl class="slider__sub--wrapper">
+                <dt class="slider__sub--thumbnail">
+                  <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_3.jpeg');"
+                    href="">
+                    <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_3.jpeg" alt="이미지">
+                    <span id="sub-image_second" class="slider__sub--thumbnail__image"
+                      style="background-image: url('./Asset/Slider/Slider_3.jpeg')"></span>
+                  </a>
+                </dt>
+                <dd class="slider__sub--summary">
+                  <span id="title_second" class="slider__sub--summary-title">클래식 핸드타이드(2/28~3/6)</span>
+                  <span id="price_second" class="slider__sub--summary-price">79,000원</span>
+                  <span class="blank"></span>
+                  <span id="chipList_second" class="slider__sub--summary-chips">
+                    <a class="slider__sub--summary-chip cyan" href="">잠실점</a>
+                    <a class="slider__sub--summary-chip orange" href="">월계점</a>
+                    <a class="slider__sub--summary-chip lightblue" href="">구로점</a>
+                    <a class="slider__sub--summary-chip yellow" href="">송파점</a>
+                    <a class="slider__sub--summary-chip blue" href="">부산동래점</a>
+                  </span>
+                </dd>
+              </dl>
+            </div>
+          </li>
+        </ul>
+        <button class="slider__button-left"></button>
+        <button class="slider__button-right"></button>
+      </div>
     </div>
   </div>
-  </div>
-
 
   <div class="banner">
     <div class="banner__inner">
@@ -206,11 +192,7 @@
           <div class="carousel-inner" style="transform: translateX(0);">
             <div class="banner__left carousel-item active">
               <a href="javascript:void(0)" class="banner__link">
-                <img
-                  class="banner__background"
-                  src="./Asset/banner-background.png"
-                  alt="background"
-                />
+                <img class="banner__background" src="./Asset/banner-background.png" alt="background" />
                 <span class="banner__real-img"></span>
                 <span class="banner__real-img mobile"></span>
                 <h3 class="banner__title">꾸까 브랜드 이야기</h3>
@@ -222,11 +204,7 @@
             </div>
             <div class="banner__right carousel-item active">
               <a href="javascript:void(0)" class="banner__link">
-                <img
-                  class="banner__background"
-                  src="./Asset/banner-background.png"
-                  alt="background"
-                />
+                <img class="banner__background" src="./Asset/banner-background.png" alt="background" />
                 <span class="banner__real-img"></span>
                 <span class="banner__real-img mobile"></span>
                 <h3 class="banner__title">꾸까 오프라인 쇼룸</h3>
@@ -249,34 +227,50 @@
     </div>
   </div>
 
+  <div class="modal">
+    <div class="modal-img">
+      <a href="https://www.naver.com/"><img class="popup-img" src="./Asset/modal.png" alt="pop1"></a>
+    </div>
+    <div class="modal-text">
+      <input id="modal-check" type="checkbox" name="check" />
+      <label for="modal-check">오늘은 더 이상 보지 않기</label>
+      <span class="close"></span>
+    </div>
+  </div>
 
   <div class="footer">
-
     <div class="footer-wrapper">
+
       <div class="footer__logos">
         <a href="https://www.facebook.com/kukka.kr/"><img src="./Asset/facebook.png" alt="facebook" /></a>
         <a href="https://www.instagram.com/kukkakorea/"><img src="./Asset/instagram.png" alt="instagram" /></a>
-        <a href="https://www.youtube.com/channel/UC_zQakXCUPvjcfsU067zyCQ?view_as=subscriber"><img src="./Asset/youtube.png" alt="youtube" /></a>
+        <a href="https://www.youtube.com/channel/UC_zQakXCUPvjcfsU067zyCQ?view_as=subscriber"><img
+            src="./Asset/youtube.png" alt="youtube" /></a>
       </div>
 
       <div class="footer__contact">
-        <div><span class="footer__contact-info">꾸까 고객센터</span><span class="footer__contact-phone">1661-1031</span></div>
-        <div>(평일 10:00 - 13:00, 14:00 - 18:00 / 주말 & 공휴일 제외) <a href="https://kukka.kr/faq/" class="service-center footer__contact-pc">꾸까
+        <div>
+          <span class="footer__contact-info">꾸까 고객센터</span><span class="footer__contact-phone">1661-1031</span>
+        </div>
+        <div>(평일 10:00 - 13:00, 14:00 - 18:00 / 주말 & 공휴일 제외) <a href="https://kukka.kr/faq/"
+            class="service-center footer__contact-pc">꾸까
             고객센터 ></a></div>
         <div>기업제휴 문의 : 070-4238-8251 </div>
         <div class="footer__about-img"><img src="/Asset/footer-logo.jpg" alt="footer-logo" /></div>
         <div class="footer__contact-last">
-          <a href="https://www.youtube.com/channel/UC_zQakXCUPvjcfsU067zyCQ?view_as=subscriber" class="service-center">꾸까 고객센터 ></a>
+          <a href="https://www.youtube.com/channel/UC_zQakXCUPvjcfsU067zyCQ?view_as=subscriber"
+            class="service-center">꾸까
+            고객센터 ></a>
         </div>
       </div>
 
       <div class="footer__about">
         <div>상호명: 꾸까(kukka)</div>
         <div>사업자 등록번호: 264-81-32594</div>
-        <div >대표자: 박춘화</div>
+        <div>대표자: 박춘화</div>
         <br class="br" />
         <div>소재지: 서울시 서초구 남부순환로333길 10 kukka</div>
-        <div><a href="https://kukka.kr/disclosure/?next=/event/flower-subscription/">기업공시</a></div>
+        <div><a href="#">기업공시</a></div>
         <div>통신판매신고번호 2018-서울서초-1692</div>
         <br class="br" />
         <div>© 2014-2021 kukka, Inc. All rights reserved.</div>
@@ -287,10 +281,9 @@
         <a href="https://kukka.kr/privacy/?next=/">개인정보처리방침</a>
         <a href="https://partners.kukka.kr/">제휴안내</a>
       </div>
+
     </div>
-
   </div>
-
-  
 </body>
+
 </html>
