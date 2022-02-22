@@ -1,0 +1,38 @@
+{
+  "name": "week4_javascript",
+  "version": "1.0.0",
+  "description": "Vanilla JavaScript Project",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel index.html",
+    "build": "parcel build index.html"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/PreOnBoarding-Team17/Week4_JavaScript.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/PreOnBoarding-Team17/Week4_JavaScript/issues"
+  },
+  "homepage": "https://github.com/PreOnBoarding-Team17/Week4_JavaScript#readme",
+  "devDependencies": {
+    "@babel/core": "^7.17.5",
+    "@babel/plugin-transform-runtime": "^7.17.0",
+    "@babel/preset-env": "^7.16.11",
+    "autoprefixer": "^9.8.8",
+    "parcel-bundler": "^1.12.5",
+    "parcel-plugin-static-files-copy": "^2.6.0",
+    "postcss": "^8.4.6"
+  },
+  "staticFiles": {
+    "staticPath": "Static"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "ie 8-11"
+  ]
+}

@@ -75,7 +75,7 @@
   -webkit-border-radius: 18px;
   -moz-border-radius: 18px;
   border-radius: 18px;
-  behavior: url("HTC/PIE.htc");
+  behavior: url("../HTC/PIE.htc");
   position: relative;
 }
 
