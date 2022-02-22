@@ -1,4 +1,4 @@
-footer {
+.footer {
   background-color: #222222;
   padding: 50px 20px;
   height: 100%;
@@ -54,13 +54,19 @@ footer {
 }
 
 .service-center {
-  border-radius: 18px;
+  background-color: #222222;
   color: #fff;
   font-size: 12px;
   font-weight: 600;
   padding: 10px 20px;
-  border: 1px solid #fff;
   cursor: pointer;
+  z-index: 3;
+  border: 1px solid #fff;
+  -webkit-border-radius: 18px;
+  -moz-border-radius: 18px;
+  border-radius: 18px;
+  behavior: url("HTC/PIE.htc");
+  position: relative;
 }
 
 .footer__about {
@@ -88,6 +94,7 @@ footer {
 
 .footer__tems {
   margin-top: 25px;
+  bottom: 0;
 }
 .footer__tems a {
   color: #fff;
@@ -101,7 +108,7 @@ footer {
 }
 
 @media screen and (min-width: 1024px) {
-  footer {
+  .footer {
     padding: 80px 60px;
   }
   .footer__logos img {
@@ -168,7 +175,7 @@ footer {
   }
 
   .footer__tems a {
-    font-size: 13px;
+    font-size: 14px;
     margin-left: 30px;
     margin-right: 0;
   }
