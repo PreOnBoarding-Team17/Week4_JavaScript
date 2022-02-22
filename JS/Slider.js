@@ -161,15 +161,14 @@ function handleChange(order) {
     subPriceSecond.innerText = price[2];
   }
 }
-
-nextButton.addEventListener("click", function (index) {
+if (window.addEventListener) {
+  nextButton.addEventListener("click", function (index) {
   if (index) {
     order++;
     if (order === 4) order = 1;
   }
   handleChange(order);
 });
-
 prevButton.addEventListener("click", function (index) {
   if (index) {
     order--;
@@ -177,3 +176,21 @@ prevButton.addEventListener("click", function (index) {
   }
   handleChange(order);
 });
+} else {
+nextButton.attachEvent("click", function (index) {
+  if (index) {
+    order++;
+    if (order === 4) order = 1;
+  }
+  handleChange(order);
+});
+
+prevButton.attachEvent("click", function (index) {
+  if (index) {
+    order--;
+    if (order === 0) order = 3;
+  }
+  handleChange(order);
+});
+}
+
