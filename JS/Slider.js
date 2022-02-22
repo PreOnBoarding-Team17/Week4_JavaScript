@@ -43,6 +43,13 @@ var chip = [
   ],
 ];
 
+function appendChip(element) {
+  var newChip = document.createElement("a");
+  newChip.innerHTML = `${element.place}`;
+  newChip.setAttribute("class", `slider__sub--summary-chip ${element.color}`);
+  return newChip;
+}
+
 function handleChip(order) {
   while (chipListFirst.hasChildNodes()) {
     chipListFirst.removeChild(chipListFirst.firstChild);
@@ -52,60 +59,24 @@ function handleChip(order) {
   }
   if (order === 3) {
     chip[0].map((element) => {
-      var newChip = document.createElement("a");
-      newChip.innerHTML = `${element.place}`;
-      newChip.setAttribute(
-        "class",
-        `slider__sub--summary-chip ${element.color}`
-      );
-      chipListFirst.appendChild(newChip);
+      chipListFirst.appendChild(appendChip(element));
     });
     chip[1].map((element) => {
-      var newChip = document.createElement("a");
-      newChip.innerHTML = `${element.place}`;
-      newChip.setAttribute(
-        "class",
-        `slider__sub--summary-chip ${element.color}`
-      );
-      chipListSecond.appendChild(newChip);
+      chipListSecond.appendChild(appendChip(element));
     });
   } else if (order === 2) {
     chip[2].map((element) => {
-      var newChip = document.createElement("a");
-      newChip.innerHTML = `${element.place}`;
-      newChip.setAttribute(
-        "class",
-        `slider__sub--summary-chip ${element.color}`
-      );
-      chipListFirst.appendChild(newChip);
+      chipListFirst.appendChild(appendChip(element));
     });
     chip[0].map((element) => {
-      var newChip = document.createElement("a");
-      newChip.innerHTML = `${element.place}`;
-      newChip.setAttribute(
-        "class",
-        `slider__sub--summary-chip ${element.color}`
-      );
-      chipListSecond.appendChild(newChip);
+      chipListSecond.appendChild(appendChip(element));
     });
   } else {
     chip[1].map((element) => {
-      var newChip = document.createElement("a");
-      newChip.innerHTML = `${element.place}`;
-      newChip.setAttribute(
-        "class",
-        `slider__sub--summary-chip ${element.color}`
-      );
-      chipListFirst.appendChild(newChip);
+      chipListFirst.appendChild(appendChip(element));
     });
     chip[2].map((element) => {
-      var newChip = document.createElement("a");
-      newChip.innerHTML = `${element.place}`;
-      newChip.setAttribute(
-        "class",
-        `slider__sub--summary-chip ${element.color}`
-      );
-      chipListSecond.appendChild(newChip);
+      chipListSecond.appendChild(appendChip(element));
     });
   }
 }
@@ -120,6 +91,7 @@ function handleChange(order) {
     `background-image: url('./Asset/Slider/Slider_${order}.jpeg')`
   );
   handleChip(order);
+
   if (order === 3) {
     subImageFirst.setAttribute(
       "style",
@@ -161,36 +133,37 @@ function handleChange(order) {
     subPriceSecond.innerText = price[2];
   }
 }
+
 if (window.addEventListener) {
   nextButton.addEventListener("click", function (index) {
-  if (index) {
-    order++;
-    if (order === 4) order = 1;
-  }
-  handleChange(order);
-});
-prevButton.addEventListener("click", function (index) {
-  if (index) {
-    order--;
-    if (order === 0) order = 3;
-  }
-  handleChange(order);
-});
+    if (index) {
+      order++;
+      if (order === 4) order = 1;
+    }
+    handleChange(order);
+  });
+
+  prevButton.addEventListener("click", function (index) {
+    if (index) {
+      order--;
+      if (order === 0) order = 3;
+    }
+    handleChange(order);
+  });
 } else {
-nextButton.attachEvent("click", function (index) {
-  if (index) {
-    order++;
-    if (order === 4) order = 1;
-  }
-  handleChange(order);
-});
+  nextButton.attachEvent("click", function (index) {
+    if (index) {
+      order++;
+      if (order === 4) order = 1;
+    }
+    handleChange(order);
+  });
 
-prevButton.attachEvent("click", function (index) {
-  if (index) {
-    order--;
-    if (order === 0) order = 3;
-  }
-  handleChange(order);
-});
+  prevButton.attachEvent("click", function (index) {
+    if (index) {
+      order--;
+      if (order === 0) order = 3;
+    }
+    handleChange(order);
+  });
 }
-
