@@ -4,7 +4,7 @@
   width: 100%;
   background-color: #fff;
   box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.1);
-  behavior: url("HTC/PIE.htc");
+  behavior: url("../HTC/PIE.htc");
   z-index: 10;
 }
 
