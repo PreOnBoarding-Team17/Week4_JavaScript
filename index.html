@@ -32,9 +32,7 @@
 
   <!-- js -->
   <script defer src="JS/GNB.js"></script>
-  <script defer src="./JS/youtube.js"></script>
   <script defer src="./JS/Banner.js"></script>
-  <script defer src="./JS/youtube.js"></script>
   <script defer src="./JS/Slider.js"></script>
   <script defer src="./JS/Footer.js"></script>
 
@@ -78,12 +76,20 @@
 
   <div id="video" class="youtube">
     <div class="youtube-area">
-      <div id="youtube__player">
+      <iframe 
+        id="youtube__player" 
+        src="https://www.youtube.com/embed/N0dc-idpwoE?autoplay=1&mute=1&loop=1&playlist=N0dc-idpwoE&enablejsapi=1&origin=http://localhost:5500"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
         현재 브라우저에서는 iframe 이 지원되지 않습니다
-      </div>
+      </iframe>
     </div>
     <a href="https://youtu.be/N0dc-idpwoE" target="youtube__player" class="youtube__caption">
-      kukka 꾸까│ 한 달 내내 진심을 전해요.</a>
+      kukka 꾸까│ 한 달 내내 진심을 전해요.
+    </a>
   </div> 
 
 
@@ -198,7 +204,7 @@
         <div id="banner-carousel" class="banner__container slide">
           <div class="carousel-inner" style="transform: translateX(0);">
             <div class="banner__left carousel-item active">
-              <a href="javascript:void(0)" class="position-relative">
+              <a href="javascript:void(0)" class="banner__link">
                 <img
                   class="banner__background"
                   src="./Asset/banner-background.png"
@@ -236,7 +242,7 @@
             <li class="banner__carousel__nav-item active"></li>
             <li class="banner__carousel__nav-item"></li>
           </ol>
-          
+
         </div>
       </div>
     </div>

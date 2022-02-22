@@ -102,6 +102,11 @@ img.banner__background {
   background-repeat: no-repeat;
   background-size: cover;
   box-sizing: border-box;
+  transition: 0.5s;
+  transform: scale(1);
+}
+.banner__link:hover .banner__real-img {
+  transform: scale(1.05);
 }
 .banner__real-img.mobile {
 }
