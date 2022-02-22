@@ -10,7 +10,6 @@
 }
 
 .footer__logos img {
-  background-color: #fff;
   width: 30px;
   height: 30px;
   margin-right: 10px;
@@ -26,6 +25,17 @@
 .footer__contact div {
   color: #fff;
   margin-top: 5px;
+}
+.footer__contact-info {
+  color: #f7f7f7;
+  font-size: 18px;
+  font-weight: 500;
+}
+.footer__contact-phone {
+  color: #f7f7f7;
+  margin: 0 5px;
+  font-size: 18px;
+  font-weight: 500;
 }
 .footer__contact div:first-child {
   font-size: 16px;
@@ -77,16 +87,14 @@
   font-size: 11px;
   font-weight: 700;
   letter-spacing: -0.17px;
-  color: #fff;
+  color: #d3d3d3;
   padding-right: 7px;
-  border-right: 1px solid #fff;
 }
-
 .footer__about > div:last-child {
   border-right: none;
 }
 .footer__about > div > a {
-  color: #fff;
+  color: #f7f7f7;
 }
 .footer__about-img {
   display: none;
@@ -100,13 +108,17 @@
   color: #fff;
   margin-right: 30px;
   font-size: 12px;
-  font-weight: 700;
+  font-weight: 400;
 }
 
 .br {
   display: none;
 }
-
+@media screen and (max-width: 1024px) {
+  .footer__about div {
+    border-right: 1px solid #fff;
+  }
+}
 @media screen and (min-width: 1024px) {
   .footer {
     padding: 80px 60px;
@@ -120,6 +132,15 @@
     margin-top: 16px;
   }
 
+  .footer__contact-info {
+    font-size: 22px;
+    font-weight: 500;
+  }
+  .footer__contact-phone {
+    font-size: 22px;
+    margin-left: 20px;
+    margin-right: 12px;
+  }
   .footer__contact div:first-child {
     display: inline-block;
     font-size: 22px;
@@ -128,6 +149,8 @@
   .footer__contact div:nth-child(2) {
     display: inline-block;
     font-size: 14px;
+    position: absolute;
+    top: -8px;
     font-weight: 600;
   }
   .footer__contact div:nth-child(2) a {
@@ -136,7 +159,7 @@
   }
   .footer__contact div:nth-child(3) {
     font-size: 14px;
-    padding-top: 0;
+    padding-top: 10px;
     padding-bottom: 25px;
   }
 
@@ -150,9 +173,10 @@
   .footer__about div {
     margin: 0px;
     font-size: 14px;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 14px;
     letter-spacing: -0.21px;
+    margin-bottom: 15px;
     padding: 0;
   }
   .footer__about div::after {
@@ -163,7 +187,6 @@
     border-style: none solid;
     padding: 0 8px;
   }
-
   .footer__tems {
     float: right;
     margin-right: 0;
