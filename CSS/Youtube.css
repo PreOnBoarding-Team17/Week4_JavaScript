@@ -3,18 +3,21 @@
 }
 
 .youtube > div {
-  display: block;
   position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   width: 100%;
-  height: 56.2vw;
+  max-width: 1240px;
+  height: 40vw;
+  max-height: 40vh;
+  box-sizing: border-box;
+  overflow: hidden;
 }
 
 #youtube__player {
   width: 100%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 0;
+  height: 56.25vw;
 }
 
 .youtube__caption {
@@ -25,6 +28,11 @@
   margin: 10px auto;
   width: 100%;
   font-size: 11px;
+  transition: 0.3s;
+}
+.youtube__caption:hover {
+  transition: 0.3s;
+  color: #fad654;
 }
 @media screen and (min-width: 1024px) {
   .youtube > div {

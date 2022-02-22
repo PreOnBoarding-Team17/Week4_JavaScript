@@ -320,6 +320,7 @@
     top: 150px;
     margin: 0;
     cursor: pointer;
+    transition: 0.3s;
   }
   .slider__button-right {
     border: none;
@@ -335,5 +336,11 @@
     position: absolute;
     background-size: 1252px 845px;
     cursor: pointer;
+    transition: 0.3s;
+  }
+  .slider__button-left:hover,
+  .slider__button-right:hover {
+    transform: scale(1.1);
+    transition: 0.3s;
   }
 }
