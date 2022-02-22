@@ -18,7 +18,6 @@
   <meta name="description"
     content="그 시즌 가장 예쁜 꽃을 받아보는 꽃 정기구독. 당일 배송되는 꽃바구니와 전국꽃배달서비스, 꾸까 오프라인 매장에서 진행하는 플라워클래스와 원데이클래스." />
 
-
   <!-- etc -->
   <link rel="icon" href="favicon.ico" />
 
@@ -27,26 +26,18 @@
   <link rel="stylesheet" href="./CSS/GlobalStyles.css" />
   <link rel="stylesheet" href="./CSS/GNB.css" />
   <link rel="stylesheet" href="./CSS/Youtube.css" />
+  <link rel="stylesheet" href="./CSS/Slider.css" />
   <link rel="stylesheet" href="./CSS/Footer.css" />
 
-  <!-- js -->
-  <script defer src="JS/GNB.js"></script>
-  <script defer src="JS/youtube.js"></script>
-  <script defer src="JS/Footer.js"></script>
-
-  <!--[if lt IE 9]>
+    <!--[if lt IE 9]>
     <!DOCTYPE html
       PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/tr/xhtml1/DTD/xhtml1-transitional.dtd">
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
   <![endif]-->
-
-
 </head>
 
 <body>
-
   <div class="header">
-
 
     <div class="mobile-header">
       <div class="mobile-logo">
@@ -78,16 +69,127 @@
   </div>
 
   <div id="video" class="youtube">
+
     <div class="youtube-area">
       <div id="youtube__player">
         현재 브라우저에서는 iframe 이 지원되지 않습니다
       </div>
     </div>
+
     <a href="https://youtu.be/N0dc-idpwoE" target="youtube__player" class="youtube__caption">
       kukka 꾸까│ 한 달 내내 진심을 전해요.</a>
+
   </div>
 
-  <section id="flower-class">슬라이더</section>
+<div id="flower-class" class="slider">
+  
+  <div class="slider__container">
+
+    <div class="slider__header">
+      <h3 class="slider__title">
+        <span>꽃과 함께 하는 일상, </span>
+        <b>플라워클래스</b>
+      </h3>
+    </div>
+
+    <div class="slider__body">
+
+      <div class="slider__main">
+        <a class="slider__main--link" href="#">
+          <img
+            class="slider__main--img pc"
+            src="./Asset/Slider/Slider_1.jpeg"
+            alt="메인 이미지"
+          />
+          <img
+            class="slider__main--img mobile"
+            src="./Asset/Slider/Slider_1.jpeg"
+            alt="메인 이미지"
+          />
+          <span
+            id="main-image_pc"
+            class="slider__main--image pc"
+            style="background-image: url('./Asset/Slider/Slider_1.jpeg')"
+          ></span>
+          <span
+            id="main-image_mobile"
+            class="slider__main--image mobile"
+            style="
+              background-image: url('./Asset/Slider/Slider_1.jpeg');
+            "
+          ></span>
+          <strong class="slider__main--title"
+            >1월 플라워 클래스 ></strong
+          >
+          <span class="slider__main--subtitle"
+            >매주 새로운 커리큘럼으로 배우는</span
+          >
+        </a>
+      </div>
+
+      <ul class="slider__sub">
+
+        <li class="slider__sub--item first">
+          <div>
+            <dl class="slider__sub--wrapper">
+              <dt class="slider__sub--thumbnail">
+                <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_2.jpeg');" href="">
+                  <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_2.jpeg" alt="이미지">
+                  <span id="sub-image_first" class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_2.jpeg')"></span>
+                </a>
+              </dt>
+              <dd class="slider__sub--summary">
+                <span id="title_first" class="slider__sub--summary-title">오아시스 리스(2/21~2/27)</span>
+                <span id="price_first" class="slider__sub--summary-price">79,000원</span>
+                <span class="blank"></span>
+                <span id="chipList_first" class="slider__sub--summary-chips">
+                  <a class="slider__sub--summary-chip purple" href="">광화문점</a>
+                  <a class="slider__sub--summary-chip cyan" href="">잠실점</a>
+                  <a class="slider__sub--summary-chip orange" href="">월계점</a>
+                  <a class="slider__sub--summary-chip lightblue" href="">구로점</a>
+                  <a class="slider__sub--summary-chip yellow" href="">송파점</a>
+                  <a class="slider__sub--summary-chip blue" href="">부산동래점</a>
+                </span>
+              </dd>
+            </dl>
+          </div>
+        </li>
+
+        <li class="slider__sub--item second">
+          <div>
+            <dl class="slider__sub--wrapper">
+              <dt class="slider__sub--thumbnail">
+                <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_3.jpeg');" href="">
+                  <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_3.jpeg" alt="이미지">
+                  <span id="sub-image_second" class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_3.jpeg')"></span>
+                </a>
+              </dt>
+              <dd class="slider__sub--summary">
+                <span id="title_second" class="slider__sub--summary-title">클래식 핸드타이드(2/28~3/6)</span>
+                <span id="price_second" class="slider__sub--summary-price">79,000원</span>
+                <span class="blank"></span>
+                <span id="chipList_second" class="slider__sub--summary-chips">
+                  <a class="slider__sub--summary-chip cyan" href="">잠실점</a>
+                  <a class="slider__sub--summary-chip orange" href="">월계점</a>
+                  <a class="slider__sub--summary-chip lightblue" href="">구로점</a>
+                  <a class="slider__sub--summary-chip yellow" href="">송파점</a>
+                  <a class="slider__sub--summary-chip blue" href="">부산동래점</a>
+                </span>
+              </dd>
+            </dl>
+          </div>
+        </li>
+
+      </ul>
+
+      <button class="slider__button-left"></button>
+      <button class="slider__button-right"></button>
+
+    </div>
+
+  </div>
+
+</div>
 
   <div class="footer">
 
@@ -130,6 +232,10 @@
 
   </div>
 
+    <!-- js -->
+  <script src="./JS/GNB.js"></script>
+  <script defer src="./JS/youtube.js"></script>
+  <script src="./JS/Slider.js"></script>
+  <script src="./JS/Footer.js"></script>
 </body>
-
 </html>
