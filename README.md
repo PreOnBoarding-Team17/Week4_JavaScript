@@ -99,9 +99,9 @@
 
 | 이름                                       | 담당 역할                           |
 | ------------------------------------------ | ----------------------------------- |
-| [황상섭](https://github.com/sangseophwang) | 초기 세팅, 슬라이더 구현, 문서 작성 |
-| [정인권](https://github.com/developjik)    | 네비게이션바, 푸터, 팝업 구현       |
-| [현다솜](https://github.com/som-syom)      | 유튜브, 배너, 번들링 구현           |
+| [황상섭](https://github.com/sangseophwang) | 초기 세팅, 슬라이더 구현, 문서 작성, 배포 |
+| [정인권](https://github.com/developjik)    | 네비게이션바, 푸터, 팝업창 구현       |
+| [현다솜](https://github.com/som-syom)      | 유튜브, 배너 구현, 번들링      |
 
 <br/>
 
@@ -150,10 +150,12 @@
 git clone https://github.com/PreOnBoarding-Team17/Week4_JavaScript.git
 ```
 
-2. 실행
+2. 순서대로 입력해주세요.
 
 ```plaintext
-html 파일을 열거나 VSCode Live Server를 통해 열어주세요.
+npm install
+npm run build
+npm run dev
 ```
 
 <br/>
