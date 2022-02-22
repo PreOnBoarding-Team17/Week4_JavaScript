@@ -12,6 +12,7 @@ var chipListFirst = document.querySelector("#chipList_first");
 var chipListSecond = document.querySelector("#chipList_second");
 
 var order = 1;
+var number = [1, 2, 3];
 var title = [
   "취미 클래스(4주 과정)",
   "오아시스 리스(2/21~2/27)",
@@ -50,120 +51,87 @@ function appendChip(element) {
   return newChip;
 }
 
-function handleChip(order) {
+function handleChip(number) {
   while (chipListFirst.hasChildNodes()) {
     chipListFirst.removeChild(chipListFirst.firstChild);
   }
   while (chipListSecond.hasChildNodes()) {
     chipListSecond.removeChild(chipListSecond.firstChild);
   }
-  if (order === 3) {
-    chip[0].map((element) => {
-      chipListFirst.appendChild(appendChip(element));
-    });
-    chip[1].map((element) => {
-      chipListSecond.appendChild(appendChip(element));
-    });
-  } else if (order === 2) {
-    chip[2].map((element) => {
-      chipListFirst.appendChild(appendChip(element));
-    });
-    chip[0].map((element) => {
-      chipListSecond.appendChild(appendChip(element));
-    });
-  } else {
-    chip[1].map((element) => {
-      chipListFirst.appendChild(appendChip(element));
-    });
-    chip[2].map((element) => {
-      chipListSecond.appendChild(appendChip(element));
-    });
-  }
+  chip[number[1] - 1].map((element) => {
+    chipListFirst.appendChild(appendChip(element));
+  });
+  chip[number[2] - 1].map((element) => {
+    chipListSecond.appendChild(appendChip(element));
+  });
 }
 
-function handleChange(order) {
+function handleChange(number) {
   mainImagePC.setAttribute(
     "style",
-    `background-image: url('./Asset/Slider/Slider_${order}.jpeg')`
+    `background-image: url('./Asset/Slider/Slider_${number[0]}.jpeg')`
   );
   mainImageMobile.setAttribute(
     "style",
-    `background-image: url('./Asset/Slider/Slider_${order}.jpeg')`
+    `background-image: url('./Asset/Slider/Slider_${number[0]}.jpeg')`
   );
-  handleChip(order);
+  subImageFirst.setAttribute(
+    "style",
+    `background-image: url('./Asset/Slider/Slider_${number[1]}.jpeg')`
+  );
+  subImageSecond.setAttribute(
+    "style",
+    `background-image: url('./Asset/Slider/Slider_${number[2]}.jpeg')`
+  );
+  subTitleFirst.innerText = title[number[1] - 1];
+  subTitleSecond.innerText = title[number[2] - 1];
+  subPriceFirst.innerText = price[number[1] - 1];
+  subPriceSecond.innerText = price[number[2] - 1];
+  handleChip(number);
+}
 
-  if (order === 3) {
-    subImageFirst.setAttribute(
-      "style",
-      `background-image: url('./Asset/Slider/Slider_1.jpeg')`
-    );
-    subImageSecond.setAttribute(
-      "style",
-      `background-image: url('./Asset/Slider/Slider_2.jpeg')`
-    );
-    subTitleFirst.innerText = title[0];
-    subTitleSecond.innerText = title[1];
-    subPriceFirst.innerText = price[0];
-    subPriceSecond.innerText = price[1];
-  } else if (order === 2) {
-    subImageFirst.setAttribute(
-      "style",
-      `background-image: url('./Asset/Slider/Slider_3.jpeg')`
-    );
-    subImageSecond.setAttribute(
-      "style",
-      `background-image: url('./Asset/Slider/Slider_1.jpeg')`
-    );
-    subTitleFirst.innerText = title[2];
-    subTitleSecond.innerText = title[0];
-    subPriceFirst.innerText = price[2];
-    subPriceSecond.innerText = price[0];
-  } else {
-    subImageFirst.setAttribute(
-      "style",
-      `background-image: url('./Asset/Slider/Slider_2.jpeg')`
-    );
-    subImageSecond.setAttribute(
-      "style",
-      `background-image: url('./Asset/Slider/Slider_3.jpeg')`
-    );
-    subTitleFirst.innerText = title[1];
-    subTitleSecond.innerText = title[2];
-    subPriceFirst.innerText = price[1];
-    subPriceSecond.innerText = price[2];
-  }
+function handlePlus() {
+  var firstNumber = number[0];
+  var secondNumber = number[1];
+  var thirdNumber = number[2];
+  number[1] = firstNumber;
+  number[2] = secondNumber;
+  number[0] = thirdNumber;
+}
+
+function handleMinus() {
+  var firstNumber = number[0];
+  var secondNumber = number[1];
+  var thirdNumber = number[2];
+  number[1] = thirdNumber;
+  number[2] = firstNumber;
+  number[0] = secondNumber;
 }
 
 if (window.addEventListener) {
   nextButton.addEventListener("click", function (index) {
     if (index) {
-      order++;
-      if (order === 4) order = 1;
+      handlePlus();
     }
-    handleChange(order);
+    handleChange(number);
   });
-
   prevButton.addEventListener("click", function (index) {
     if (index) {
-      order--;
-      if (order === 0) order = 3;
+      handleMinus();
     }
-    handleChange(order);
+    handleChange(number);
   });
 } else {
   nextButton.attachEvent("click", function (index) {
     if (index) {
-      order++;
-      if (order === 4) order = 1;
+      handlePlus();
     }
-    handleChange(order);
+    handleChange(number);
   });
-
   prevButton.attachEvent("click", function (index) {
     if (index) {
-      order--;
-      if (order === 0) order = 3;
+      handleMinus();
     }
-    handleChange(order);
+    handleChange(number);
   });
 }
