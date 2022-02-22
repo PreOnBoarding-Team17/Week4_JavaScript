@@ -4,7 +4,6 @@ const bannerItem = document.querySelectorAll(".carousel-item");
 
 window.onload = function () {
   winWidth = window.innerWidth;
-  // console.log("hi", window.innerWidth);
   curFlag = window.innerWidth > 1024 ? true : false;
   if (winWidth > 1024) {
     bannerItem[0].classList.add("active");
@@ -16,7 +15,6 @@ window.onload = function () {
     handleCarousel();
     curFlag = false;
   }
-  // handleCarousel();
 };
 
 const carouselInner = document.querySelector(".carousel-inner");
@@ -41,7 +39,7 @@ window.onresize = function () {
 
 let curPos = 0;
 let postion = 0;
-let start_x, end_x, x;
+let start_x, end_x, x, start;
 let IMAGE_WIDTH = window.innerWidth - 40;
 let pressed = false;
 const images = document.querySelector(".carousel-inner");
@@ -53,6 +51,7 @@ images.addEventListener("mousedown", (e) => {
   e.preventDefault();
   pressed = true;
   start_x = e.offsetX - images.offsetLeft;
+  start = +images.style.transform.match(/([0-9]|-[0-9])+/g)[0];
   console.log(
     e.offsetX,
     images.offsetLeft,
@@ -89,23 +88,12 @@ function next() {
 }
 window.addEventListener("mouseup", (e) => {
   e.preventDefault();
-  if (x - start_x < 0 && x - start_x > window.innerWidth / 3) {
-    console.log("first");
+  if (x - start_x < 0 && x - start_x < -window.innerWidth / 4) {
     next();
-  } else if (x - start_x > 0 && x - start_x < window.innerWidth / 3) {
-    console.log("second");
+  } else if (x - start_x > 0 && x - start_x > window.innerWidth / 4) {
     prev();
   } else {
-    console.log("third");
-    if (sliderNav[0].classList.contains("active")) {
-      console.log("prev");
-      setTimeout(() => prev(), 100);
-      // prev();
-    } else {
-      console.log("next");
-      setTimeout(() => next(), 100);
-      // next();
-    }
+    images.style.transform = `translateX(${start}px)`;
   }
   pressed = false;
 });
@@ -114,16 +102,17 @@ images.addEventListener("mousemove", (e) => {
   e.preventDefault();
   x = e.offsetX;
 
-  console.log(start_x, x, start_x - x);
-  images.style.transform = `translateX(${x - start_x}px)`;
+  images.style.transform = `translateX(${start - (start_x - x)}px)`;
 });
 
 function touch_start(event) {
+  event.preventDefault();
   start_x = event.touches[0].pageX;
   console.log("a");
 }
 
 function touch_end(event) {
+  event.preventDefault();
   end_x = event.changedTouches[0].pageX;
   if (start_x > end_x) {
     next();
