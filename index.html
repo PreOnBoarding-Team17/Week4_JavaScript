@@ -26,8 +26,15 @@
   <link rel="stylesheet" href="./CSS/GlobalStyles.css" />
   <link rel="stylesheet" href="./CSS/GNB.css" />
   <link rel="stylesheet" href="./CSS/Youtube.css" />
+  <link rel="stylesheet" href="./CSS/Banner.css" />
   <link rel="stylesheet" href="./CSS/Slider.css" />
   <link rel="stylesheet" href="./CSS/Footer.css" />
+
+  <!-- js -->
+  <script defer src="JS/GNB.js"></script>
+  <script defer src="./JS/Banner.js"></script>
+  <script defer src="./JS/Slider.js"></script>
+  <script defer src="./JS/Footer.js"></script>
 
     <!--[if lt IE 9]>
     <!DOCTYPE html
@@ -65,35 +72,37 @@
         </ul>
       </nav>
     </div>
-
   </div>
 
   <div id="video" class="youtube">
-
     <div class="youtube-area">
-      <div id="youtube__player">
+      <iframe 
+        id="youtube__player" 
+        src="https://www.youtube.com/embed/N0dc-idpwoE?autoplay=1&mute=1&loop=1&playlist=N0dc-idpwoE&enablejsapi=1&origin=http://localhost:5500"
+        title="YouTube video player"
+        frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen
+      >
         현재 브라우저에서는 iframe 이 지원되지 않습니다
-      </div>
+      </iframe>
     </div>
-
     <a href="https://youtu.be/N0dc-idpwoE" target="youtube__player" class="youtube__caption">
-      kukka 꾸까│ 한 달 내내 진심을 전해요.</a>
+      kukka 꾸까│ 한 달 내내 진심을 전해요.
+    </a>
+  </div> 
 
-  </div>
 
-<div id="flower-class" class="slider">
-  
-  <div class="slider__container">
-
-    <div class="slider__header">
-      <h3 class="slider__title">
-        <span>꽃과 함께 하는 일상, </span>
+  <div id="flower-class" class="slider">
+    <div class="slider__container">
+      <div class="slider__header">
+        <h3 class="slider__title">
+          <span>꽃과 함께 하는 일상, </span>
         <b>플라워클래스</b>
       </h3>
     </div>
 
     <div class="slider__body">
-
       <div class="slider__main">
         <a class="slider__main--link" href="#">
           <img
@@ -128,7 +137,6 @@
       </div>
 
       <ul class="slider__sub">
-
         <li class="slider__sub--item first">
           <div>
             <dl class="slider__sub--wrapper">
@@ -179,17 +187,67 @@
             </dl>
           </div>
         </li>
-
       </ul>
-
       <button class="slider__button-left"></button>
       <button class="slider__button-right"></button>
-
     </div>
-
   </div>
 
-</div>
+
+  <div class="banner">
+    <div class="banner__inner">
+      <div class="banner__header">
+        <h3 class="banner__header__title">꾸까 브랜드 스토리</h3>
+      </div>
+
+      <div class="banner__contents">
+        <div id="banner-carousel" class="banner__container slide">
+          <div class="carousel-inner" style="transform: translateX(0);">
+            <div class="banner__left carousel-item active">
+              <a href="javascript:void(0)" class="banner__link">
+                <img
+                  class="banner__background"
+                  src="./Asset/banner-background.png"
+                  alt="background"
+                />
+                <span class="banner__real-img"></span>
+                <span class="banner__real-img mobile"></span>
+                <h3 class="banner__title">꾸까 브랜드 이야기</h3>
+                <p class="banner__description">
+                  꽃으로 라이프스타일을 만들어가는 <br />kukka의 문화를 소개해요.
+                  <span class="banner__more">Brand story</span>
+                </p>
+              </a>
+            </div>
+            <div class="banner__right carousel-item active">
+              <a href="javascript:void(0)" class="banner__link">
+                <img
+                  class="banner__background"
+                  src="./Asset/banner-background.png"
+                  alt="background"
+                />
+                <span class="banner__real-img"></span>
+                <span class="banner__real-img mobile"></span>
+                <h3 class="banner__title">꾸까 오프라인 쇼룸</h3>
+                <p class="banner__description">
+                  꽃을 가까이서 만져보고 향기도 맡아보고, <br />꽃 속에서 작은
+                  휴식을 누릴 수 있는 kkuka의 오프라인 쇼룸
+                  <span class="banner__more">꾸까 쇼룸 안내</span>
+                </p>
+              </a>
+            </div>
+          </div>
+
+          <ol class="banner__carousel__nav">
+            <li class="banner__carousel__nav-item active"></li>
+            <li class="banner__carousel__nav-item"></li>
+          </ol>
+
+        </div>
+      </div>
+    </div>
+  </div>
+
 
   <div class="footer">
 
@@ -232,10 +290,6 @@
 
   </div>
 
-    <!-- js -->
-  <script src="./JS/GNB.js"></script>
-  <script defer src="./JS/youtube.js"></script>
-  <script src="./JS/Slider.js"></script>
-  <script src="./JS/Footer.js"></script>
+  
 </body>
 </html>
