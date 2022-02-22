@@ -11,7 +11,7 @@ var subPriceSecond = document.querySelector("#price_second");
 var chipListFirst = document.querySelector("#chipList_first");
 var chipListSecond = document.querySelector("#chipList_second");
 
-var i = 1;
+var order = 1;
 var title = [
   "취미 클래스(4주 과정)",
   "오아시스 리스(2/21~2/27)",
@@ -43,14 +43,14 @@ var chip = [
   ],
 ];
 
-function handleChip(i) {
+function handleChip(order) {
   while (chipListFirst.hasChildNodes()) {
     chipListFirst.removeChild(chipListFirst.firstChild);
   }
   while (chipListSecond.hasChildNodes()) {
     chipListSecond.removeChild(chipListSecond.firstChild);
   }
-  if (i === 3) {
+  if (order === 3) {
     chip[0].map((element) => {
       var newChip = document.createElement("a");
       newChip.innerHTML = `${element.place}`;
@@ -69,7 +69,7 @@ function handleChip(i) {
       );
       chipListSecond.appendChild(newChip);
     });
-  } else if (i === 2) {
+  } else if (order === 2) {
     chip[2].map((element) => {
       var newChip = document.createElement("a");
       newChip.innerHTML = `${element.place}`;
@@ -110,17 +110,17 @@ function handleChip(i) {
   }
 }
 
-function handleChange(i) {
+function handleChange(order) {
   mainImagePC.setAttribute(
     "style",
-    `background-image: url('./Asset/Slider/Slider_${i}.jpeg')`
+    `background-image: url('./Asset/Slider/Slider_${order}.jpeg')`
   );
   mainImageMobile.setAttribute(
     "style",
-    `background-image: url('./Asset/Slider/Slider_${i}.jpeg')`
+    `background-image: url('./Asset/Slider/Slider_${order}.jpeg')`
   );
-  handleChip(i);
-  if (i === 3) {
+  handleChip(order);
+  if (order === 3) {
     subImageFirst.setAttribute(
       "style",
       `background-image: url('./Asset/Slider/Slider_1.jpeg')`
@@ -133,7 +133,7 @@ function handleChange(i) {
     subTitleSecond.innerText = title[1];
     subPriceFirst.innerText = price[0];
     subPriceSecond.innerText = price[1];
-  } else if (i === 2) {
+  } else if (order === 2) {
     subImageFirst.setAttribute(
       "style",
       `background-image: url('./Asset/Slider/Slider_3.jpeg')`
@@ -164,16 +164,16 @@ function handleChange(i) {
 
 nextButton.addEventListener("click", function (index) {
   if (index) {
-    i++;
-    if (i === 4) i = 1;
+    order++;
+    if (order === 4) order = 1;
   }
-  handleChange(i);
+  handleChange(order);
 });
 
 prevButton.addEventListener("click", function (index) {
   if (index) {
-    i--;
-    if (i === 0) i = 3;
+    order--;
+    if (order === 0) order = 3;
   }
-  handleChange(i);
+  handleChange(order);
 });
