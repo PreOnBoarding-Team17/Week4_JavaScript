@@ -23,7 +23,7 @@
   <link rel="icon" href="favicon.ico" />
 
   <!-- Bootstrap -->
-  <link
+  <!-- <link
   rel="stylesheet"
   href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
   integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn"
@@ -43,7 +43,7 @@
   src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"
   integrity="sha384-VHvPCCyXqtD5DqJeNxl2dtTyhF78xXNXdkwX1CZeRusQfRKp+tA7hAShOK/B/fQ2"
   crossorigin="anonymous"
-></script>
+></script> -->
 
   <!-- css -->
   <link rel="stylesheet" href="./CSS/Reset.css" />
@@ -55,7 +55,7 @@
   <!-- js -->
   <script src="JS/GNB.js"></script>
   <script defer src="./JS/youtube.js"></script>
-  <script src="./JS/Banner.js"></script>
+  <script defer src="./JS/Banner.js"></script>
 </head>
 
 <body>
@@ -100,39 +100,52 @@
 
   <section id="flower-class">슬라이더</section>
   <section class="banner">
-    배너
-    <div class="banner__container">
-      <div class="row">
-        <div class="banner__left col-xl">
-          <a href="javascript:void(0)" class="banner__link">
-            <img
-              class="banner__background"
-              src="./Assets/banner-background.png"
-              alt="background"
-            />
-            <span class="banner__real-img"></span>
-            <h3 class="banner__title">꾸까 브랜드 이야기</h3>
-            <p class="banner__description">
-              꽃으로 라이프스타일을 만들어가는 <br />kukka의 문화를 소개해요.
-              <span class="banner__more">Brand story</span>
-            </p>
-          </a>
-        </div>
-        <div class="banner__right col-xl">
-          <a href="javascript:void(0)" class="banner__link">
-            <img
-              class="banner__background"
-              src="./Assets/banner-background.png"
-              alt="background"
-            />
-            <span class="banner__real-img"></span>
-            <h3 class="banner__title">꾸까 오프라인 쇼룸</h3>
-            <p class="banner__description">
-              꽃을 가까이서 만져보고 향기도 맡아보고, <br />꽃 속에서 작은
-              휴식을 누릴 수 있는 kkuka의 오프라인 쇼룸
-              <span class="banner__more">꾸까 쇼룸 안내</span>
-            </p>
-          </a>
+    <div class="banner__inner">
+      <div class="banner__header">
+        <h3 class="banner__header__title">꾸까 브랜드 스토리</h3>
+      </div>
+
+      <div class="banner__contents">
+        <div id="banner-carousel" class="banner__container slide">
+          <div class="carousel-inner">
+            <div class="banner__left carousel-item active">
+              <a href="#" class="position-relative">
+                <img
+                  class="banner__background"
+                  src="./Asset/banner-background.png"
+                  alt="background"
+                />
+                <span class="banner__real-img"></span>
+                <span class="banner__real-img mobile"></span>
+                <h3 class="banner__title">꾸까 브랜드 이야기</h3>
+                <p class="banner__description">
+                  꽃으로 라이프스타일을 만들어가는 <br />kukka의 문화를 소개해요.
+                  <span class="banner__more">Brand story</span>
+                </p>
+              </a>
+            </div>
+            <div class="banner__right carousel-item active">
+              <a href="#" class="banner__link">
+                <img
+                  class="banner__background"
+                  src="./Asset/banner-background.png"
+                  alt="background"
+                />
+                <span class="banner__real-img"></span>
+                <span class="banner__real-img mobile"></span>
+                <h3 class="banner__title">꾸까 오프라인 쇼룸</h3>
+                <p class="banner__description">
+                  꽃을 가까이서 만져보고 향기도 맡아보고, <br />꽃 속에서 작은
+                  휴식을 누릴 수 있는 kkuka의 오프라인 쇼룸
+                  <span class="banner__more">꾸까 쇼룸 안내</span>
+                </p>
+              </a>
+            </div>
+          </div>
+          <ol class="banner__carousel__nav">
+            <li class="banner__carousel__nav-item active"></li>
+            <li class="banner__carousel__nav-item"></li>
+          </ol>
         </div>
       </div>
     </div>
