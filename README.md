@@ -126,11 +126,17 @@
 
 [풀리퀘스트 링크](https://github.com/PreOnBoarding-Team17/Week4_JavaScript/pulls?q=is%3Apr+is%3Aclosed)
 
+![스크린샷 2022-02-22 오후 11 58 17](https://user-images.githubusercontent.com/98322239/155159080-701a5b1b-7b6e-40ee-9762-ace56fb6a048.png)
+
+
 <br/>
 
 ### [3] 이슈를 작성해 서로의 진행상황을 공유했습니다 👀
 
 [이슈 링크](https://github.com/PreOnBoarding-Team17/Week4_JavaScript/issues?q=is%3Aissue+is%3Aclosed)
+
+![스크린샷 2022-02-22 오후 11 57 47](https://user-images.githubusercontent.com/98322239/155159105-27b1e124-2e66-4229-bc9e-4bb59e9ef9ec.png)
+
 
 <br/>
 
