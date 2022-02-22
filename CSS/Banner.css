@@ -108,6 +108,9 @@ img.banner__background {
 .banner__link:hover .banner__real-img {
   transform: scale(1.05);
 }
+.banner__link:hover .banner__real-img.mobile {
+  transform: scale(1);
+}
 .banner__real-img.mobile {
 }
 
