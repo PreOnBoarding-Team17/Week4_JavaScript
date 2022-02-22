@@ -11,7 +11,6 @@ var subPriceSecond = document.querySelector("#price_second");
 var chipListFirst = document.querySelector("#chipList_first");
 var chipListSecond = document.querySelector("#chipList_second");
 
-var order = 1;
 var number = [1, 2, 3];
 var title = [
   "취미 클래스(4주 과정)",
