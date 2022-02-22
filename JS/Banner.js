@@ -52,11 +52,6 @@ images.addEventListener("mousedown", (e) => {
   pressed = true;
   start_x = e.offsetX - images.offsetLeft;
   start = +images.style.transform.match(/([0-9]|-[0-9])+/g)[0];
-  console.log(
-    e.offsetX,
-    images.offsetLeft,
-    parseInt(e.offsetX) - parseInt(images.offsetLeft)
-  );
   images.style.cursor = "grabbing";
 });
 images.addEventListener("mouseenter", (e) => {
