@@ -7,12 +7,13 @@ firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
 function onYouTubeIframeAPIReady() {
   new YT.Player("youtube__player", {
     videoId: "N0dc-idpwoE",
-    host: `${window.location.protocol}//www.youtube.com`,
+    host: `https://www.youtube.com`,
     playerVars: {
       autoplay: true,
       loop: true,
       playlist: "N0dc-idpwoE",
-      origin: "http://localhost:5500",
+      origin: window.location.href,
+      enablejsapi: 1,
     },
     events: {
       onReady: function (event) {
