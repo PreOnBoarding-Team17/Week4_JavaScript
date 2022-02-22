@@ -28,10 +28,6 @@
   <link rel="stylesheet" href="./CSS/GNB.css" />
   <link rel="stylesheet" href="./CSS/Youtube.css" />
   <link rel="stylesheet" href="./CSS/Slider.css" />
-
-  <!-- js -->
-  <script src="./JS/GNB.js"></script>
-  <script defer src="./JS/youtube.js"></script>
 </head>
 
 <body>
@@ -92,17 +88,19 @@
             />
             <img
               class="slider__main--img mobile"
-              src="./Asset/Slider/Slider_Mobile_1.jpeg"
+              src="./Asset/Slider/Slider_1.jpeg"
               alt="메인 이미지"
             />
             <span
+              id="main-image_pc"
               class="slider__main--image pc"
               style="background-image: url('./Asset/Slider/Slider_1.jpeg')"
             ></span>
             <span
+              id="main-image_mobile"
               class="slider__main--image mobile"
               style="
-                background-image: url('./Asset/Slider/Slider_Mobile_1.jpeg');
+                background-image: url('./Asset/Slider/Slider_1.jpeg');
               "
             ></span>
             <strong class="slider__main--title"
@@ -120,12 +118,12 @@
                 <dt class="slider__sub--thumbnail">
                   <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_2.jpeg');" href="">
                     <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_2.jpeg" alt="이미지">
-                    <span class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_2.jpeg')"></span>
+                    <span id="sub-image_first" class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_2.jpeg')"></span>
                   </a>
                 </dt>
                 <dd class="slider__sub--summary">
-                  <span class="slider__sub--summary-title">오아시스 리스(2/21~2/27)</span>
-                  <span class="slider__sub--summary-price">79,000원</span>
+                  <span id="title_first" class="slider__sub--summary-title">오아시스 리스(2/21~2/27)</span>
+                  <span id="price_first" class="slider__sub--summary-price">79,000원</span>
                   <span class="blank"></span>
                   <span class="slider__sub--summary-chips">
                     <a class="slider__sub--summary-chip purple" href="">광화문점</a>
@@ -145,12 +143,12 @@
                 <dt class="slider__sub--thumbnail">
                   <a class="slider__sub--thumbnail__link" style="background-image: url('./Asset/Slider/Slider_3.jpeg');" href="">
                     <img class="slider__sub--thumbnail__img" src="./Asset/Slider/Slider_3.jpeg" alt="이미지">
-                    <span class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_3.jpeg')"></span>
+                    <span id="sub-image_second" class="slider__sub--thumbnail__image"  style="background-image: url('./Asset/Slider/Slider_3.jpeg')"></span>
                   </a>
                 </dt>
                 <dd class="slider__sub--summary">
-                  <span class="slider__sub--summary-title">클래식 핸드타이드(2/28~3/6)</span>
-                  <span class="slider__sub--summary-price">79,000원</span>
+                  <span id="title_second" class="slider__sub--summary-title">클래식 핸드타이드(2/28~3/6)</span>
+                  <span id="price_second" class="slider__sub--summary-price">79,000원</span>
                   <span class="blank"></span>
                   <span class="slider__sub--summary-chips">
                     <a class="slider__sub--summary-chip cyan" href="">잠실점</a>
@@ -164,11 +162,17 @@
             </div>
           </li>
         </ul>
+        <button class="slider__button-left"></button>
+        <button class="slider__button-right"></button>
       </div>
     </div>
   </section>
   <section>배너</section>
   <footer>푸터</footer>
-</body>
 
+    <!-- js -->
+  <script src="./JS/GNB.js"></script>
+  <script defer src="./JS/youtube.js"></script>
+  <script src="./JS/Slider.js"></script>
+</body>
 </html>
