@@ -9,7 +9,7 @@
 
 <br/>
 
-[🌍 배포 링크]()
+[🌍 배포 링크](https://17seoul-kukka.netlify.app/)
 
 <br />
 
