@@ -121,7 +121,5 @@ function touch_end(event) {
   }
 }
 
-// slider nav
-
 sliderNav[0].addEventListener("click", () => prev());
 sliderNav[1].addEventListener("click", () => next());
