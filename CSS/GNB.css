@@ -41,6 +41,7 @@
 .menu-text:hover {
   border-bottom: 4px solid #ffc948;
   padding-bottom: 4px;
+  transition: 0.3s;
 }
 
 .menu-img {
