@@ -139,6 +139,7 @@
   .footer__contact-phone {
     font-size: 22px;
     margin-left: 20px;
+    margin-right: 12px;
   }
   .footer__contact div:first-child {
     display: inline-block;
