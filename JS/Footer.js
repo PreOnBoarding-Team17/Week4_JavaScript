@@ -1,35 +1,32 @@
 var lowIE = !window.addEventListener
-var screenWidth = document.documentElement.clientWidth;
+var isIE = /*@cc_on!@*/false || !!document.documentMode;
 
+function onResize() {
+    var screenWidth = document.documentElement.clientWidth;
+    console.log(screenWidth)
+    var contact = document.querySelector('.footer__contact')
+    var tems = document.querySelector('.footer__tems')
+    var contactPc = document.querySelector('.footer__contact-pc')
+    var contactLast = document.querySelector('.footer__contact-last')
 
-if(lowIE) {
-    document.querySelector('.footer__contact').style.paddingBottom = '20px';
-    document.querySelector('.footer__contact-last').style.marginTop = '20px';
-    document.querySelector('.footer__contact-pc').style.display = 'none';
+    if(screenWidth < 1024) {
+        contactLast.style.marginTop = '20px';
+        contactLast.style.display = 'inline-block';
+        contactPc.style.display = 'none';
+        if(lowIE) contact.style.paddingBottom = '20px';
+    }
+    
+    if(screenWidth >= 1024) { 
+        tems.style.bottom = '40px';
+        contactLast.style.display = 'none';
+        contactPc.style.display = 'inline-block';
+        contactPc.style.marginLeft = '16px';
+    } 
 }
 
-if (lowIE && screenWidth >= 1024) {
-    document.querySelector('.footer__tems').style.bottom = '40px';
-    document.querySelector('.footer__contact-last').style.display = 'none';
-    document.querySelector('.footer__contact-pc').style.display = 'inline-block';
-    document.querySelector('.footer__contact-pc').style.marginLeft = '16px';
-} 
+if(isIE) {
+    onResize()
 
-if (lowIE) {
-    window.attachEvent("onresize", function(e) {
-        var screenWidth = document.documentElement.clientWidth;
-
-        if(screenWidth < 1024) {
-            document.querySelector('.footer__contact').style.paddingBottom = '20px';
-            document.querySelector('.footer__contact-last').style.marginTop = '20px';
-            document.querySelector('.footer__contact-last').style.display = 'block';
-            document.querySelector('.footer__contact-pc').style.display = 'none';
-        }
-        else { 
-            document.querySelector('.footer__tems').style.bottom = '40px';
-            document.querySelector('.footer__contact-last').style.display = 'none';
-            document.querySelector('.footer__contact-pc').style.display = 'inline-block';
-            document.querySelector('.footer__contact-pc').style.marginLeft = '16px';
-        } 
-    })
+    lowIE ? window.attachEvent("onresize", onResize) :  window.addEventListener("resize", onResize);
+    
 }
